@@ -1,4 +1,4 @@
-.popup{
+.popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,7 +17,7 @@
   z-index: 1999;
 }
 
-.close-btn i{
+.close-btn i {
   float: right;
   cursor: pointer;
   font-size: 20px;
@@ -25,58 +25,54 @@
   padding: 10px;
   display: flex;
 }
-.popup-container{
+
+.popup-container {
   background-color: rgba(91, 123, 170, 0.1);
-
-
-}
-.pop-window{
-    display: flex;
-    flex-direction: column;
-    padding: 0px 16px;
-    margin-top: 86px;
-    background: #fff;
-    border: 1px solid #dfe1e6;
-    border-radius: 16px;
-    margin-left: 9%;
-    margin-right: 9%;
-    left: 24px;
-    position: absolute;      
 }
 
-.card-heading{
+.pop-window {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  margin-top: 86px;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  margin-left: 9%;
+  margin-right: 9%;
+  left: 24px;
+  position: absolute;
+}
+
+.card-heading {
   font-size: 32px;
-  color: #172B4D;
+  color: #172b4d;
+  display: flex;
 }
 
-.decription{
+.decription {
   padding-top: 10px;
   font-size: 15px;
   color: #344563;
   font-weight: 400;
-}
-.pop img{
-  display: flex;
-}
-
-.decription{
   width: 100%;
 }
-.card-heading{
-  display: flex;
 
+.pop img {
+  display: flex;
 }
+
 .lang-tag {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-@media only screen and (min-width: 768px){
-  .pop-window{
+@media only screen and (min-width: 768px) {
+  .pop-window {
     display: flex;
     flex-direction: column;
-    padding: 0px 16px;
+    padding: 0 16px;
     margin-top: 86px;
     background: #fff;
     border: 1px solid #dfe1e6;
@@ -84,39 +80,36 @@
     margin-left: 9%;
     margin-right: 9%;
     left: 24px;
-    position: absolute; 
-   
-}
-/* img{
+    position: absolute;
+  }
+
+  /* img{
   width: 100%;
   display: flex;
 } */
 
-.lon-p{
-  flex-wrap: wrap;
-  margin-left: 70px;
-}
+  .lon-p {
+    flex-wrap: wrap;
+    margin-left: 70px;
+  }
 
-.data-pop{
-  display: flex;
- flex-direction: row;
- justify-content: space-between;
+  .data-pop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
- 
-}
+  .decription {
+    width: 100%;
+  }
 
-.decription{
-  width: 100%;
-}
-.card-heading{
-  display: flex;
+  .card-heading {
+    display: flex;
+  }
 
-}
-.lang-tag {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-
+  .lang-tag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

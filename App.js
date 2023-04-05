@@ -1,7 +1,11 @@
-//mobile menu
+// mobile menu
 const navItems = document.querySelector('.nav-menu');
 const openMenu = document.querySelector('.menu-bar');
 const closeMenu = document.querySelector('.closing-btn');
+const form = document.querySelector('form');
+const email = document.querySelector('#email');
+const message = document.querySelector('#message');
+const errorMsg = document.querySelector('#error-msg');
 // show menu
 function show() {
   navItems.style.display = 'flex';
@@ -20,32 +24,30 @@ navItems.addEventListener('click', () => {
   navItems.style.right = '100%';
 });
 
-
-
-const product = [  {   
-   name: 'Tonic',   
-  paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',    
-  Image: '/img/project-img/d-project-1.png',    
+const product = [{
+  name: 'Tonic',
+  paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
+  Image: '/img/project-img/d-project-1.png',
   languages: ['html', 'css', 'javaScript'],
-  },
-  {
-    name: 'Multi-Post Stories',
-    paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    Image: '/img/project-img/d-project-2.png',
-    languages: ['html', 'css', 'javaScript'],
-  },
-  {
-    name: 'Tonic',
-    paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    Image: '/img/project-img/d-project-3.png',
-    languages: ['html', 'css', 'javaScript'],
-  },
-  {
-    name: 'Multi-Post Stories',
-    paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    Image: '/img/project-img/d-project-4.png',
-    languages: ['html', 'css', 'javaScript'],
-  },
+},
+{
+  name: 'Multi-Post Stories',
+  paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
+  Image: '/img/project-img/d-project-2.png',
+  languages: ['html', 'css', 'javaScript'],
+},
+{
+  name: 'Tonic',
+  paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
+  Image: '/img/project-img/d-project-3.png',
+  languages: ['html', 'css', 'javaScript'],
+},
+{
+  name: 'Multi-Post Stories',
+  paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
+  Image: '/img/project-img/d-project-4.png',
+  languages: ['html', 'css', 'javaScript'],
+},
 ];
 
 const box = document.querySelector('.cards');
@@ -71,8 +73,19 @@ product.forEach((item) => {
       <ul class="lang-tag">${lang}</ul>
       <button class="see-btn">see project</button>
     </div>  
-  </div>`
-  
+  </div>`;
+
   box.appendChild(div);
 });
 
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (message.value === '') {
+    errorMsg.textContent = 'Please enter a message';
+  } else if (email.value.toUpperCase() === email.value) {
+    errorMsg.textContent = 'please email must not be capitalized';
+  } else {
+    errorMsg.textContent = '';
+    form.submit();
+  }
+});
