@@ -3,7 +3,6 @@ const navItems = document.querySelector('.nav-menu');
 const openMenu = document.querySelector('.menu-bar');
 const closeMenu = document.querySelector('.closing-btn');
 const form = document.querySelector('form');
-const nameField = document.getElementById('name');
 const emailField = document.getElementById('email');
 const messageField = document.getElementById('message');
 const errorMsg = document.getElementById('error-msg');
@@ -82,15 +81,9 @@ product.forEach((item) => {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const namePattern = /[A-Z]/;
-  if (namePattern.test(nameField.value)) {
-    errorMsg.textContent = 'Name must not contain uppercase letters.';
-    return;
-  }
-
-  const emailValue = emailField.value.toLowerCase();
+  const emailValue = emailField.value.trim();
   const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-  if (!emailPattern.test(emailValue.value)) {
+  if (!emailPattern.test(emailValue)) {
     errorMsg.textContent = 'Please enter a valid email address without uppercase letters.';
     return;
   }
