@@ -27,25 +27,25 @@ navItems.addEventListener('click', () => {
 const product = [{
   name: 'Tonic',
   paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-  Image: '/img/project-img/d-project-1.png',
+  Image: './img/project-img/d-project-1.png',
   languages: ['html', 'css', 'javaScript'],
 },
 {
   name: 'Multi-Post Stories',
   paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-  Image: '/img/project-img/d-project-2.png',
+  Image: './img/project-img/d-project-2.png',
   languages: ['html', 'css', 'javaScript'],
 },
 {
   name: 'Tonic',
   paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-  Image: '/img/project-img/d-project-3.png',
+  Image: './img/project-img/d-project-3.png',
   languages: ['html', 'css', 'javaScript'],
 },
 {
   name: 'Multi-Post Stories',
   paragraph: 'A daily selection of privately personalized reads; no accounts or sign-ups required',
-  Image: '/img/project-img/d-project-4.png',
+  Image: './img/project-img/d-project-4.png',
   languages: ['html', 'css', 'javaScript'],
 },
 ];

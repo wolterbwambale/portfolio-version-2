@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   section.className = 'pop';
   let content = '';
 
-  // Define the 'projects' array
-
   const projects = [
     {
       heading: 'Tonic',
@@ -16,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrambled it to make a type specimen book. It has survived not only
                 five centuries, but also the leap into electronic typesetting,
                 remaining essent`,
-      photo: '/img/project-img/d-project-1.png',
+      photo: './img/project-img/d-project-1.png',
       technologies: ['html', 'css', 'javaScript', 'github', 'ruby', 'Bootstraps'],
     },
     {
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrambled it to make a type specimen book. It has survived not only
                 five centuries, but also the leap into electronic typesetting,
                 remaining essent`,
-      photo: '/img/project-img/d-project-2.png',
+      photo: './img/project-img/d-project-2.png',
       technologies: ['html', 'css', 'javaScript', 'github', 'ruby', 'Bootstraps'],
     },
     {
@@ -38,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrambled it to make a type specimen book. It has survived not only
                 five centuries, but also the leap into electronic typesetting,
                 remaining essent`,
-      photo: '/img/project-img/d-project-3.png',
+      photo: './img/project-img/d-project-3.png',
       technologies: ['html', 'css', 'javaScript', 'github', 'ruby', 'Bootstraps'],
     },
     {
@@ -49,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrambled it to make a type specimen book. It has survived not only
                 five centuries, but also the leap into electronic typesetting,
                 remaining essent`,
-      photo: '/img/project-img/d-project-4.png',
+      photo: './img/project-img/d-project-4.png',
       technologies: ['html', 'css', 'javaScript', 'github', 'ruby', 'Bootstraps'],
     },
   ];
