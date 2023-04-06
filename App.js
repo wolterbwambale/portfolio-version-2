@@ -3,9 +3,10 @@ const navItems = document.querySelector('.nav-menu');
 const openMenu = document.querySelector('.menu-bar');
 const closeMenu = document.querySelector('.closing-btn');
 const form = document.querySelector('form');
-const email = document.querySelector('#email');
-const message = document.querySelector('#message');
-const errorMsg = document.querySelector('#error-msg');
+const nameField = document.getElementById('name');
+const emailField = document.getElementById('email');
+const messageField = document.getElementById('message');
+const errorMsg = document.getElementById('error-msg');
 // show menu
 function show() {
   navItems.style.display = 'flex';
@@ -80,12 +81,24 @@ product.forEach((item) => {
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  if (message.value === '') {
-    errorMsg.textContent = 'Please enter a message';
-  } else if (email.value.toUpperCase() === email.value) {
-    errorMsg.textContent = 'please email must not be capitalized';
-  } else {
-    errorMsg.textContent = '';
-    form.submit();
+
+  const namePattern = /[A-Z]/;
+  if (namePattern.test(nameField.value)) {
+    errorMsg.textContent = 'Name must not contain uppercase letters.';
+    return;
   }
+
+  const emailValue = emailField.value.toLowerCase();
+  const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+  if (!emailPattern.test(emailValue.value)) {
+    errorMsg.textContent = 'Please enter a valid email address without uppercase letters.';
+    return;
+  }
+
+  if (messageField.value.trim() === '') {
+    errorMsg.textContent = 'Please enter a message.';
+    return;
+  }
+
+  form.submit();
 });

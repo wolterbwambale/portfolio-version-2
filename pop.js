@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
   seeProject.addEventListener('click', () => {
     book.appendChild(section);
     section.style.display = 'flex';
-    //   document.body.style.overflow = 'hidden';
 
     book.addEventListener('click', (event) => {
       if (event.target === section || event.target.closest('.close-btn')) {
